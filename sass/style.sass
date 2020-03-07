@@ -1,0 +1,81 @@
+@import 'vars'
+@import 'interface'
+@import 'header'
+@import 'face'
+@import 'features'
+@import 'payouts'
+@import 'feedback'
+@import 'questions'
+@import 'contacts'
+@import 'footer'
+@import 'popup'
+@import 'undefined'
+@import 'animation'
+
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+	
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+main, .undefined
+	transition: filter .3s
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	font-family: 'Oswald', sans-serif
+	color: #324332
+
+html
+	overflow-x: hidden
+
+img
+	object-fit: cover
+	max-width: 100%
+	height: auto
+
+a, a:visited
+  color: inherit
+  text-decoration: none
+
+.container
+	width: 100%
+	padding-left: 15px
+	padding-right: 15px
+	margin-left: auto
+	margin-right: auto
+	
+@media (min-width: 576px)
+  .container
+    max-width: 540px
+
+@media (min-width: 768px)
+  .container
+    max-width: 720px
+
+@media (min-width: 992px)
+  .container
+    max-width: 960px
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1220px
+
+.container-fluid
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+
+.grid
+	display: grid

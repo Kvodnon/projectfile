@@ -1,0 +1,48 @@
+.footer
+  padding-bottom: 30px
+  padding-top: 38px
+  background: url(../img/footer/bg.png) bottom center no-repeat
+  &-wrap
+    font-size: 14px
+    font-weight: 600
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-copyright
+    font-style: normal
+    flex-basis: 25%
+  &-contract
+    text-align: right
+    flex-basis: 25%
+    
+@media screen and ( min-width: 1920px )
+  .footer
+    background-size: cover
+
+@media screen and ( max-width: 992px )
+  .footer
+    &-wrap a
+      cursor: default
+@media screen and ( max-width: 768px )
+  .footer
+    background-color: $accent2
+    background-image: none
+    padding: 25px 0
+    &-wrap
+      font-size: 12px
+    &-contract
+      flex-basis: 15%
+
+    
+@media screen and ( max-width: 576px )
+  .footer
+    padding-top: 25px
+    &-wrap
+      flex-wrap: wrap
+      text-align: center
+    &-copyright, &-contract, &-rules
+      flex-basis: 100%
+      margin-bottom: 15px
+      text-align: center
+    &-contract
+      margin-bottom: 0

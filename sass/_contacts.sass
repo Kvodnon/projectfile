@@ -1,0 +1,136 @@
+.contacts
+  padding: 100px 0
+  &-title
+    margin-bottom: 10px
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+  &-subtitle
+    font-weight: 600
+    font-size: 22px
+    display: inline-block
+    margin-bottom: 35px
+  &-link
+    margin-bottom: 12px
+    &__title
+      font-size: 22px
+      font-weight: normal
+      display: inline-block
+      margin-bottom: 8px
+    &__text
+      display: flex
+      align-items: flex-start
+      img
+        margin-right: 8px
+      a
+        font-size: 18px
+        font-weight: 300
+        line-height: 18px
+  &-form
+    padding: 20px
+    background: url(../img/contacts/form-bg.svg) no-repeat
+    flex-basis: 582px
+    padding-top: 43px
+    padding-bottom: 37px
+    &__title
+      display: block
+      font-size: 22px
+      font-family: 'Russo One', sans-serif
+      font-weight: normal
+      margin-bottom: 22px
+    &__input
+      height: 50px
+      padding: 10px
+      flex-basis: 100%
+      margin-right: 16px
+      max-width: 260px
+      padding-left: 20px
+      font-size: 18px
+      font-weight: 300
+      margin-bottom: 20px
+      border: none
+      background-color: #E4FFDF
+      box-shadow: inset 2px -2px 0px #324332
+      &_mail
+        margin-right: 0
+    &__textarea
+      display: block
+      font-size: 18px
+      font-weight: 300
+      margin-bottom: 20px
+      border: none
+      background-color: #E4FFDF
+      box-shadow: inset 2px -2px 0px #324332
+      width: 100%
+      padding: 10px
+      padding-left: 20px
+      min-height: 120px
+      resize: none
+    &__inputs
+      display: flex
+      justify-content: space-between
+    &__btn
+      display: block
+      margin-left: auto
+      padding: 12px 34px
+      font-family: 'Russo One', sans-serif
+      font-size: 18px
+      background-color: #E4FFDF
+      box-shadow: 2px 2px 0px #324332
+
+
+@media screen and ( max-width: 992px )
+  .contacts
+    padding-top: 70px
+    text-align: center
+    border-top: 45px solid transparent
+    background-clip: padding-box
+    margin-top: -45px
+    &-text
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 30px
+    &-link
+      &__text
+        justify-content: center
+        a
+          cursor: default
+    &-form
+      margin-left: auto
+      margin-right: auto
+
+@media screen and ( max-width: 768px )
+  .contacts
+    padding-top: 55px
+    &-form
+      padding-top: 30px
+      padding-bottom: 25px
+      background: $accent2
+
+@media screen and ( max-width: 576px ) 
+  .contacts
+    padding-top: 40px
+    &-link
+      &__title
+        font-size: 21px
+      &__text
+        a
+          font-size: 17px
+    &-form
+      &__inputs
+        // flex-wrap: wrap
+        
+@media screen and ( max-width: 470px )
+  .contacts
+    &-form
+      &__inputs
+        flex-wrap: wrap
+      &__input
+        max-width: none
+        margin-right: 0
+      &__btn
+        text-align: center
+        margin-right: auto
+        font-size: 21px

@@ -1,0 +1,283 @@
+.overlay
+  z-index: 200
+  width: 100%
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  display: none
+  overflow-x: hidden
+  overflow-y: auto
+  &::after
+    content: ''
+    position: fixed
+    z-index: -1
+    display: block
+    width: 100%
+    height: 100%
+
+.overlay-registry
+  display: none
+.overlay-login
+  display: none
+
+.popup
+  position: absolute
+  left: 50%
+  top: 20%
+  transform: translateX(-50%)
+  transform-origin: -20% 50%
+  background: #E4FFDF url(../img/popup/bg.jpg) no-repeat
+  box-shadow: 6px 6px 0px #324332
+  padding: 67px 80px
+  padding-left: 480px
+  max-width: 880px
+  &-thanks
+    position: fixed
+    top: 160px
+    left: 50%
+    transform: translateX(-50%)
+    transform-origin: -20% 50%
+    padding: 40px
+    padding-bottom: 50px
+    padding-right: 120px
+    box-shadow: 6px 6px 0px #324332
+    background: #E4FFDF url(../img/popup/thanks-bg_form.svg) no-repeat right bottom
+    width: 100%
+    max-width: 465px
+    // display: none
+    &_form
+      padding-right: 75px
+    &__title
+      font-size: 48px
+      margin-bottom: 12px
+      &_form
+        font-size: 36px
+        margin-bottom: 20px
+    &__descr
+      font-size: 18px
+      max-width: 260px
+      line-height: 27px
+      &_form
+        max-width: none
+
+
+
+.popup-form
+  text-align: center
+  width: 100%
+  width: 320px
+.registry-form
+  &__input
+    &_login
+      background: url(../img/popup/login.svg) no-repeat right 18px center
+    &_password
+      background: url(../img/popup/password.svg) no-repeat right 18px center
+    &_mail
+      background: url(../img/popup/mail.svg) no-repeat right 18px center
+  &__btn
+    font-size: 22px
+    padding: 8px 20px
+    background-color: $accent
+    color: #E4FFDF
+    box-shadow: none
+    margin-bottom: 20px
+  &__text
+    display: flex
+    justify-content: space-between
+    a
+      font-style: normal
+      font-size: 14px
+      font-weight: 200
+      text-decoration: underline
+      color: $accent
+      transition: color .3s
+
+.login-form__btn
+  font-size: 22px
+  padding: 8px 20px
+  background-color: $accent
+  color: #E4FFDF
+  box-shadow: none
+  margin-bottom: 20px
+
+.g-recaptcha
+  transform: scale(0.62)
+  transform-origin: 0 0 
+.captcha
+  width: 190px
+  height: 50px
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 18px
+  &-wrap
+    display: flex
+    justify-content: space-between
+    .captcha
+      margin-left: 0
+      width: 165px
+      height: 44px
+    .g-recaptcha
+      transform: scale(0.55)
+.login-form
+  &__btn
+    padding: 8px 41px
+
+.close
+  background: url(../img/popup/close.svg) center no-repeat
+  width: 40px
+  height: 40px
+  position: absolute
+  top: 4px
+  right: 0
+  font-size: 0
+
+.invalid-form
+  font-size: 12px
+  line-height: 10px
+  font-weight: 300
+  background-color: #73D3C7
+  padding: 7px 0
+  margin-bottom: 14px
+
+.input-wrap
+  position: relative
+
+.invalid
+  border: 1px solid #73D3C7
+  &-text
+    display: inline-block
+    background-color: #73D3C7
+    font-size: 12px
+    font-weight: 300
+    padding: 2px 6px 5px 6px
+    position: absolute
+    top: -10px
+    right: 55px
+    display: none
+.invalid + .invalid-text
+  display: inline-block
+.overflow
+  overflow: hidden
+
+@media screen and ( min-width: 992px )
+  .registry-form
+    &__btn:hover
+      background-color: $accent2
+      color: $accent
+    &__text
+      a:hover
+        color: $accent2
+  .login-form__btn:hover
+    background-color: $accent2
+    color: $accent
+  .close
+    cursor: pointer
+
+@media screen and ( max-width: 1300px )
+  .popup
+    margin-bottom: 100px
+
+@media screen and ( max-width: 992px )
+  .popup
+    padding: 50px 60px
+    background-image: none
+
+  
+@media screen and ( max-width: 768px )
+  .popup
+    top: 140px
+    margin-bottom: 50px
+    &-thanks
+      text-align: center
+      padding: 40px 20px
+      max-width: 400px
+      &_form
+        max-width: 440px
+      &__descr
+        margin-left: auto
+        margin-right: auto
+        font-size: 16px
+        line-height: 20px
+  
+@media screen and ( max-width: 490px )
+  .registry-form__text a
+    font-size: 12px
+  .popup-form
+    width: auto
+  .popup
+    left: 15px
+    right: 15px
+    transform: translateX(0)
+    transform-origin: 50% 50%
+    padding: 35px 30px
+    box-shadow: none
+    top: 120px
+    &-thanks
+      transform: translateX(0)
+      transform-origin: 50% 50%
+      max-width: none
+      box-shadow: none
+      left: 25px
+      right: 25px
+      width: auto
+      text-align: center
+      padding-right: 20px
+      padding-left: 20px
+      padding-top: 30px
+      padding-bottom: 30px
+      display: block
+      &__descr
+        margin-left: auto
+        margin-right: auto
+        &_form
+          max-width: 200px
+  .captcha
+    margin-bottom: 12px
+    margin-top: 12px
+    &-wrap
+      flex-wrap: wrap
+      justify-content: center
+      .captcha
+        margin-top: 0
+        margin-bottom: 6px
+  .login-form__btn
+    margin-bottom: 10px
+  .close
+    transform: scale(0.7)
+    top: 0
+    right: -3px
+
+@media screen and ( max-width: 410px ) 
+  .captcha-wrap
+    .captcha
+      margin-left: auto
+  .login-form__btn
+    flex-basis: 100%
+  .registry-form__btn
+    padding-top: 10px
+    padding-bottom: 10px
+    width: 100%
+  .invalid-text
+    top: -6px
+    right: 6px
+  .input
+    background-image: none
+    font-size: 16px
+    height: 45px
+  .popup
+    &-thanks
+      &__title
+        &_form
+          margin-bottom: 25px
+
+@media screen and ( max-width: 350px ) 
+  .popup
+    padding-left: 15px
+    padding-right: 15px
+  .registry-form__btn
+    padding: 13px 25px
+  .login-form__btn
+    padding: 9px 35px
+  .close
+    transform: scale(0.65)

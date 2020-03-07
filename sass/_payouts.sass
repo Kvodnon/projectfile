@@ -1,0 +1,227 @@
+.payouts
+  padding-top: 65px
+  padding-bottom: 170px
+  background: $accent url(../img/payouts/bg.jpg) no-repeat center top
+  background-size: cover
+  border-top: 35px solid transparent
+  background-clip: padding-box
+  margin-top: -35px
+  &-title
+    margin-bottom: 55px
+    color: #E4FFDF
+  &-wrap
+    display: flex
+    flex-wrap: wrap
+  &-item
+    background: url(../img/payouts/item-bg.svg) no-repeat
+    margin-right: 15px
+    flex-basis: 385px
+    max-height: 172px
+    margin-bottom: 17px
+    &:nth-child(3)
+      margin-right: 0
+    &_days
+      padding: 35px 35px 43px 160px
+      background: url(../img/payouts/item-money.svg) no-repeat 2px 5px, url(../img/payouts/item-bg.svg) no-repeat
+    &_top
+      padding: 25px 37px 30px 30px
+    &_process
+      padding: 25px 53px 27px 29px
+      font-weight: 300
+      font-size: 18px
+      text-align: left
+      background: url(../img/payouts/column-bg.svg) no-repeat right, url(../img/payouts/item-bg.svg) no-repeat
+      i
+        max-width: 125px
+        font-style: normal
+        line-height: 159%
+    &_tariff
+      background: url(../img/payouts/item-bg_big.svg) no-repeat
+      padding: 38px 105px 42px 95px
+      flex-basis: 100%
+      text-align: center
+      margin: 0
+    &__title
+      font-weight: normal
+      font-family: 'Russo One', sans-serif
+      font-size: 22px
+      margin-bottom: 20px
+      &_days
+        max-width: 185px
+        text-align: center
+        font-size: 36px
+        color: $accent
+        position: relative
+        span:nth-child(1)
+          font-family: 'PT Sans Narrow', sans-serif
+          font-size: 56px
+          font-weight: bold
+          vertical-align: top
+          display: inline-block
+        span:nth-child(2)
+          display: inline-block
+          margin-top: 5px
+      &_top
+        display: flex
+        justify-content: space-between
+        span
+          font-family: 'Oswald', sans-serif
+          font-weight: 300
+      &_tariff
+        margin-bottom: 10px
+    &__wrap
+      &_top
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        justify-content: flex-end
+        height: 50px
+        align-items: flex-start
+      &_tariff
+        font-size: 16px
+        font-weight: 300
+        display: flex
+        justify-content: space-between
+      &_process
+        display: flex
+        justify-content: space-between
+    &__text
+      &_top
+        font-weight: 300
+        font-size: 18px
+        span
+          font-weight: bold
+          &:last-child
+            font-weight: normal
+        &:first-child
+          margin-bottom: 8px
+        &:nth-of-type(3)
+          align-self: flex-end
+          
+          
+    &__subtitle
+      font-size: 14px
+      font-style: normal
+      font-weight: 300
+      display: inline-block
+      margin-bottom: 22px
+
+@media screen and ( max-width: 1216px )
+  .payouts
+    text-align: center
+    border-top: 35px solid transparent
+    background-clip: padding-box
+    margin-top: -35px
+    background-position: left -750px top
+    &-wrap
+      justify-content: center
+    &-item
+      max-height: 160px
+      &_tariff
+        background: #E4FFDF
+        flex-basis: 100%
+        padding: 35px 50px 40px 50px
+      &_process
+        height: 160px
+        margin-bottom: 20px
+
+@media screen and ( max-width: 1200px )
+  .payouts-item_top
+    margin-right: 0
+    &_tariff
+      flex-basis: 785px
+@media screen and ( max-width: 992px )
+  .payouts
+    padding-top: 70px
+    padding-bottom: 130px
+    background-position: right -500px top
+    &-title
+      margin-bottom: 35px
+    &-item
+      &_days
+        margin-right: 0
+      &_tariff
+        flex-basis: 385px
+        max-height: none
+        padding-bottom: 26px
+        padding-top: 26px
+        span
+          display: inline-block
+          flex-basis: 50px
+          margin-bottom: 7px
+      &__wrap
+        &_tariff
+          flex-wrap: wrap
+          
+@media screen and ( max-width: 768px )
+  .payouts
+    padding-top: 40px
+    padding-bottom: 95px
+    background-image: none
+    background-color: $accent
+    border-top: 40px solid transparent
+    background-clip: padding-box
+    margin-top: -40px
+    &-title
+      margin-bottom: 30px
+    &-item
+      &_tariff
+        padding-bottom: 22px
+
+@media screen and ( max-width: 576px )
+  .payouts
+    padding-bottom: 70px
+    &-title
+      margin-bottom: 25px
+    &-item
+      background: #E4FFDF
+      padding: 16px
+      font-size: 16px
+      &_tariff
+        padding-left: 50px
+        padding-right: 50px
+      &__wrap
+        &_top
+          height: auto
+        &_tariff
+          justify-content: space-between
+      &__text_top
+        font-size: 16px
+          
+      &_days
+        background: #E4FFDF
+        padding: 35px 0
+        padding-bottom: 25px
+        display: flex
+        justify-content: center
+        align-items: center
+      &_process
+        height: auto
+      &__title
+        font-size: 19px
+        &_days
+          font-size: 36px
+          margin: 0
+        &_top
+          align-items: center
+          span
+            font-size: 15px
+        &_process
+          margin-bottom: 15px
+      &__text
+        &_top
+          margin-bottom: 8px
+        &:nth-child(3)
+          align-self: auto
+        
+
+@media screen and ( max-width: 410px )
+  .payouts
+    &-item
+      &_tariff
+        padding-left: 25px
+        padding-right: 25px
+        span
+          flex-basis: 60px
+      &__wrap_tariff
+        justify-content: center

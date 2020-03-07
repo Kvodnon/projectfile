@@ -1,0 +1,143 @@
+.features
+  padding-top: 70px
+  padding-bottom: 115px
+  background: url(../img/features/bg.jpg) 50% -5px no-repeat
+  &-title
+    margin-bottom: 70px
+  &-wrap
+    display: flex
+    flex-wrap: wrap
+  &-item
+    background: url(../img/features/item-bg_header.svg) 0 0 no-repeat
+    flex-basis: 385px
+    padding: 20px
+    padding-right: 15px
+    margin-bottom: 55px
+    margin-right: 15px
+    position: relative
+    z-index: 189
+    &::before
+      content: ''
+      display: inline-block
+      position: absolute
+      top: 42px
+      left: 0
+      width: 100%
+      height: calc( 100% - 42px )
+      background: url(../img/features/item-bg_body.svg) no-repeat
+      z-index: -1
+      background-position: right 5px top
+      background-size: cover
+    &:nth-child(3n)
+      margin-right: 0
+    &__text
+      margin-bottom: 8px
+      display: flex
+      align-items: flex-start
+    &__title
+      align-self: flex-end
+      margin-top: 45px
+      font-family: 'Russo One', sans-serif
+      font-weight: normal
+      font-size: 22px
+      border-bottom: 2px solid #324332
+    &__img
+      margin-right: 20px
+      width: 66px
+    &__descr
+      line-height: 140%
+      font-weight: 300
+      font-size: 18px
+    &__header
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+
+.btn-up
+  display: inline-block
+  position: fixed
+  bottom: 50px
+  z-index: 120
+  right: 25px
+  width: 40px
+  height: 40px
+  background: $accent url(../img/features/arrow-up.svg) center 10px no-repeat
+  box-shadow: 2px 2px 0px #74D372
+  transition: background .3s
+
+@media screen and ( min-width: 992px )
+  .btn-up
+    &:hover
+      background: $accent2 url(../img/features/arrow-up_hover.svg) center 10px no-repeat
+    
+
+
+@media screen and ( min-width: 1920px )
+  .features
+    background-size: cover
+@media screen and ( max-width: 1215px )
+  .features
+    padding-bottom: 85px
+    &-title
+      text-align: center
+    &-item
+      &:nth-child(3n)
+        margin-right: 20px
+    &-item
+      &:nth-child(2n) 
+        margin-right: 0
+    &-wrap
+      justify-content: space-around
+      
+@media screen and ( max-width: 992px )
+  .features
+    background: url(../img/features/gradient.jpg) 50% -5px no-repeat
+    padding-bottom: 60px
+    &-item
+      margin-right: 0 !important
+      margin-bottom: 40px
+    &-title
+      margin-bottom: 50px
+  .btn-up
+    cursor: default
+
+@media screen and ( max-width: 768px )
+  .features
+    background: url(../img/features/gradient.jpg) 50% -12px no-repeat
+    padding-top: 50px
+    padding-bottom: 50px
+    border-top: 50px solid transparent
+    background-clip: padding-box
+    margin-top: -50px
+
+@media screen and ( max-width: 576px )
+  .features
+    &-title
+      margin-bottom: 30px
+    &-item
+      margin-bottom: 15px
+      text-align: center
+      background: $accent2
+      padding-left: 10px
+      padding-right: 14px
+      padding-bottom: 20px
+      &__title
+        align-self: center
+        margin-top: 0
+        font-size: 20px
+        border-bottom: none
+      &__text
+        flex-direction: column
+        margin-bottom: 4px
+      &__img
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 10px
+      &__descr
+        font-size: 16px
+
+  .btn-up
+    right: 12px
+    bottom: 12px
+    transform: scale(0.9)

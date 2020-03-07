@@ -1,0 +1,181 @@
+.feedback
+  padding: 110px 0
+  padding-top: 70px
+  background-color: #fafff8
+  border-top: 55px solid transparent
+  background-clip: padding-box
+  margin-top: -55px
+  &-title
+    margin-bottom: 65px
+  &-item
+    background: url(../img/feedback/slider-bg.svg) no-repeat
+    color: #fff
+    padding: 0 !important
+    font-family: 'Russo One', sans-serif
+    height: auto !important
+    margin: 6px
+    // max-width: 389px !important
+    transition: all .3s
+    outline: none
+    &__img
+      width: 40px
+      margin-right: 11px
+    &__name
+      display: flex
+      align-items: flex-start
+      margin-bottom: 5px
+    &__text
+      color: #74D373
+      b
+        display: block
+        font-weight: normal
+      i
+        font-size: 13px
+        margin-left: 8px
+        font-style: normal
+    &__wrap
+      padding: 20px
+      padding-left: 30px
+      padding-top: 34px
+    &__descr
+      font-family: 'Oswald', sans-serif
+      line-height: 140%
+      color: #E4FFDF
+      font-size: 18px
+      font-weight: 200
+  &-slider
+    margin: 0 auto
+    // max-width: 1080px
+    max-width: 1100px
+
+// SLIDER
+
+.slick-track
+  display: flex
+  align-items: stretch
+  transition: all .5s
+.slick-current + .slick-active
+  margin: 0
+  background: url(../img/feedback/slider-bg_active2.svg) no-repeat
+
+.slick-dots li button::before
+  font-size: 0
+  color: transparent
+  opacity: 1
+  width: 40px
+  height: 40px
+  background: url(../img/feedback/dot.svg) no-repeat center
+  transition: background .2s
+.slick-dots li button, .slick-dots li
+  width: 40px
+  height: 40px
+  margin: 0
+.slick-dots li.slick-active button:before
+  font-size: 0
+  background: url(../img/feedback/dot_active.svg) no-repeat center
+  color: transparent
+  opacity: 1
+  transition: background .2s
+.slick-dots
+  bottom: -60px
+  
+
+.arrow
+  position: absolute
+  top: 50%
+  height: 42px
+  width: 40px
+  transform: translateY(-50%)
+  transition: background .3s
+  &_left
+    left: -60px
+    background: url(../img/feedback/arrow-left.svg) center no-repeat
+  &_right
+    right: -60px
+    background: url(../img/feedback/arrow-right.svg) center no-repeat
+
+
+@media screen and ( min-width: 992px )
+  .slick-dots li button:hover::before
+    color: transparent
+    background: url(../img/feedback/dot_hover.svg) no-repeat center
+  .arrow
+    cursor: pointer
+    &_left
+      &:hover
+        background-image: url(../img/feedback/arrow-left_active.svg)
+    &_right
+      &:hover
+        background-image: url(../img/feedback/arrow-right_active.svg)
+  .slick-dots li.slick-active button:hover:before
+    background: url(../img/feedback/dot_active.svg) no-repeat center
+
+
+@media screen and ( max-width: 1215px )
+  .feedback
+    &-title
+      text-align: center
+      margin-bottom: 45px
+    &-slider
+      max-width: 420px
+    &-item
+      background-color: $accent
+      background-image: none
+      text-align: center
+      width: 100% !important
+      max-width: none !important
+      &__wrap
+        padding: 30px !important
+      &__name
+        justify-content: center
+  .feedback-item
+    padding: 30px
+      
+@media ( min-width: 1215px )
+  .slick-current + .slick-active
+    width: 387px !important
+    min-width: 387px !important
+    // max-width: 389px
+    height: 235px !important
+  .slick-current + .slick-active + .slick-active
+    margin-right: 2px
+  .slick-current
+    margin-right: 0px
+  .feedback-slider
+    max-height: 235px
+@media screen and ( max-width: 992px )
+  .feedback
+    padding-top: 20px
+    &-title
+      margin-bottom: 20px
+  .slick-dots li button
+    cursor: default
+      
+@media screen and ( max-width: 768px )
+  .feedback
+    padding-top: 55px
+    border-top: 35px solid transparent
+    background-clip: padding-box
+    margin-top: -35px
+    &-title
+      margin-bottom: 25px
+
+@media screen and ( max-width: 576px )
+  .feedback
+    padding-top: 40px
+    padding-bottom: 75px
+    &-title
+      margin-bottom: 15px
+    &-item
+      &__wrap
+        padding: 15px !important
+        padding-top: 24px !important
+      &__descr
+        max-width: 300px
+        margin-left: auto
+        margin-right: auto
+  .slick-dots
+    bottom: -40px
+
+
+

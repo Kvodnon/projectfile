@@ -1,0 +1,61 @@
+.undefined
+  padding-top: 195px
+  padding-bottom: 360px
+  background: $accent url(../img/undefined/bg.jpg) top no-repeat
+  height: 100vh
+  &-wrap
+    background-color: $accent2
+    padding: 60px
+    padding-bottom: 70px
+    display: inline-block
+  &-subtitle
+    font-family: 'Russo One', sans-serif
+    font-size: 96px
+    line-height: 96px
+    font-weight: normal
+    text-transform: uppercase
+    margin: 0
+  &-title
+    font-family: 'Russo One', sans-serif
+    font-size: 196px
+    font-weight: normal
+    text-transform: uppercase
+    margin: 0
+    margin-top: 20px
+    line-height: 196px
+.undefined-text
+  display: block
+  text-align: center
+  font-size: 16px
+  font-family: 'Oswald', sans-serif
+  font-weight: bold
+  text-transform: none
+  color: rgba(50, 67, 50, 0.8)
+
+.undefined-logo
+  flex-basis: 75%  
+  
+@media screen and ( max-width: 992px )
+  .undefined
+    text-align: center
+
+@media screen and ( max-width: 768px )
+  .undefined-logo
+      flex-basis: 70%
+
+@media screen and ( max-width: 576px )
+  .undefined
+    padding-top: 190px
+    &-wrap
+      padding: 45px 35px
+    &-subtitle
+      font-size: 48px
+      line-height: 48px
+    &-title
+      font-size: 98px
+      line-height: 98px
+    &-logo
+      flex-basis: 55%
+  .undefined-text
+    font-size: 14px
+  

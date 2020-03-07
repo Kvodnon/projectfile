@@ -1,0 +1,218 @@
+.header
+  padding: 12px 0
+  background-color: #74D373
+  transition: height .3s
+  position: fixed
+  z-index: 202
+  width: 100%
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-logo
+    a
+      display: flex
+      align-items: center
+      font-family: 'Russo One', sans-serif
+      font-size: 22px
+      span
+        margin-left: 20px
+  &-navbar
+    display: flex
+    list-style: none
+    width: 605px
+    justify-content: space-between
+    font-weight: 200
+    text-transform: uppercase
+    font-size: 17px
+    a
+      padding: 8px 18px
+      transition: background-color .3s
+  &-lang
+    position: relative
+    a
+      text-transform: uppercase
+      font-size: 22px
+      font-weight: bold
+      display: flex
+      align-items: center
+      span
+        margin-left: 10px
+    &__en
+      position: absolute
+      z-index: 1
+    &__ru
+      position: relative
+      z-index: 2
+  &-login
+    a
+      display: flex
+      align-items: center
+      font-size: 22px
+      font-weight: bold
+      text-transform: uppercase
+      line-height: 33px
+      padding: 4px 15px
+      transition: background-color .3s
+      span
+        margin-left: 10px
+  &-burger
+    position: relative
+    display: block
+    width: 40px
+    height: 40px
+    z-index: 3
+    display: none
+    transition: all .5s
+    span
+      display: block
+      position: absolute
+      width: 28px
+      height: 4px
+      left: 50%
+      top: 50%
+      margin-left: -14px
+      margin-top: -2px
+      background-color: $accent
+      &::after, &::before
+        content: ''
+        display: block
+        position: absolute
+        left: 50%
+        margin-left: -14px
+        top: 50%
+        width: 28px
+        height: 4px
+        background-color: $accent
+      &::after
+        margin-top: 6px
+      &::before
+        margin-top: -10px
+    &_active
+      position: absolute
+      right: 10px
+      span
+        background-color: transparent
+        &::before
+          transform: rotate(45deg)
+          margin-top: -2px
+        &::after
+          transform: rotate(-45deg)
+          margin-top: -2px
+    &_hidden
+      width: 40px
+      height: 40px
+      display: none
+  &-menu
+    background-color: $accent2
+    position: fixed
+    z-index: 4
+    width: 30vw
+    height: 425px
+    right: -30vw
+    top: 63px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: right .3s, top .3s
+    ul
+      text-align: center
+      line-height: 60px
+      list-style: none
+      color: #fff
+      margin: 0
+      padding: 0
+      a
+        display: block
+        width: 30vw
+        font-weight: 200
+        text-transform: uppercase
+        font-size: 17px
+    &_active
+      right: 0
+      position: absolute
+
+
+@media screen and ( min-width: 992px )
+  .header
+    &-navbar
+      a:hover
+          background-color: rgba($accent, .1)
+    &-lang:hover
+      .header-lang__en
+        left: -15px
+        z-index: 2
+    &-login
+      a:hover
+        background-color: rgba($accent, .1)
+    &-menu
+      ul
+        a:hover
+          background-color: $accent
+
+
+
+@media screen and ( max-width: 1200px )
+  .header
+    &-logo
+      a
+        width: 31px
+      span
+        display: none
+    &-login
+      a
+        padding: 8px 15px
+      span
+        display: none
+    nav
+      // flex-basis: 80%
+
+
+@media screen and ( max-width: 992px )
+  .header
+    &-logo
+      flex-basis: 60%
+    nav
+      flex-basis: 0
+    &-navbar
+      display: none
+    &-burger
+      display: block 
+      cursor: default
+    &-lang__en
+      left: -15px
+      z-index: 2
+    &-login a, &-lang a, &-logo a, &-menu a
+      cursor: default
+
+@media screen and ( max-width: 576px )
+  .header
+    &-logo
+      flex-basis: 40%
+    &-menu
+      width: auto
+      z-index: -1
+      height: 0 
+      background-color: transparent
+      transition: height .3s
+      position: static
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      overflow: hidden
+      &_active
+        height: 290px
+        padding-top: 15px
+        // padding-bottom: 15px
+      ul
+        width: 100%
+        line-height: 55px
+        a
+          width: 100%
+          font-size: 15px
+    &-burger
+      z-index: 11
+      &_active
+        position: relative
+        right: 0

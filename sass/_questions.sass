@@ -1,0 +1,143 @@
+.questions
+  padding-top: 160px
+  padding-bottom: 100px
+  background: url(../img/questions/bg.png) no-repeat center
+  &-title
+    margin-bottom: 40px
+  &-wrap
+    column-count: 2
+    &_btn
+      display: flex
+      justify-content: flex-end
+      text-align: right
+      align-items: center
+      margin-top: 40px
+      b
+        font-size: 26px
+        font-weight: normal
+        font-family: 'Russo One', sans-serif
+        position: relative
+        margin-right: 150px
+        display: inline-block
+        align-self: flex-start
+        margin-bottom: 50px
+        &::before
+          content: ''
+          display: inline-block
+          width: 219px
+          height: 15px
+          background: url(../img/questions/arrow.svg) no-repeat
+          position: absolute
+          bottom: -15px
+          left: 233px
+        span
+          font-size: 44px
+  &-item
+    padding: 20px 33px 27px 60px
+    background-color: #E4FFDF
+    margin-bottom: 20px
+    box-shadow: 2px 2px 1px #B3CEC8
+    display: inline-block
+    width: 100%
+    &__title
+      font-family: 'Russo One', sans-serif
+      font-size: 20px
+      font-weight: normal
+      margin-bottom: 20px
+      display: flex
+      align-items: center
+      position: relative
+      &::before
+        content: ''
+        width: 30px
+        height: 30px
+        background: url(../img/questions/sign.svg) center no-repeat
+        position: absolute
+        left: -40px
+    &__descr
+      font-weight: 300
+      font-size: 18px
+      line-height: 140%
+      max-width: 500px
+      margin-left: -13px
+      padding-left: 10px
+      border-left: 3px solid #74D373
+      text-align: left !important
+  &-btn
+    background-color: #E4FFDF
+    font-family: 'Russo One', sans-serif
+    padding-left: 44px
+    padding-right: 44px
+
+@media screen and ( min-width: 1920px )
+  .questions
+    background-size: cover
+
+@media screen and ( max-width: 1200px )
+  .questions
+    padding-top: 100px
+    background: $accent
+    &-wrap
+      justify-content: center
+    &-title
+      text-align: center
+      color: #E4FFDF
+      margin-bottom: 25px
+    &-wrap
+      &_btn
+        margin-top: 25px
+        flex-wrap: wrap
+        justify-content: center
+        b
+          color: #E4FFDF
+          text-align: center
+          margin: 0
+          flex-basis: 100%
+          margin-bottom: 15px
+          &::before
+            display: none
+    &-btn
+      background-color: $accent2
+@media screen and ( max-width: 992px )
+  .questions
+    padding-top: 75px
+    border-top: 55px solid transparent
+    background-clip: padding-box
+    margin-top: -55px
+    &-wrap
+      column-count: 1
+      text-align: center
+    &-item
+      width: 80%
+
+
+@media screen and ( max-width: 768px )
+  .questions
+    padding-top: 55px
+    &-item
+      box-shadow: none
+      width: 100%
+
+@media screen and ( max-width: 576px )
+  .questions
+    padding-top: 40px
+    padding-bottom: 65px
+    border-top: 40px solid transparent
+    background-clip: padding-box
+    margin-top: -40px
+    &-item
+      padding: 16px
+      padding-left: 25px
+      &__title
+        font-size: 19px
+        &::before
+          display: none
+      &__descr
+        font-size: 16px
+        border: none
+    &-wrap
+      &_btn
+        margin-top: 20px
+        font-size: 22px
+        b
+          display: none

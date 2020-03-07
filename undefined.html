@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project File</title>
+  <link rel="shortcut icon" href="img/header/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,600,700&display=swap&subset=cyrillic"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-wrap">
+
+        <div class="header-logo undefined-logo">
+          <a href="index.html"><img src="img/header/logo.svg" alt="Project File"><span>Project File</span></a>
+        </div>
+
+
+        <div class="header-lang">
+          <a href="#">
+            <img class="header-lang__ru" src="img/header/lang-ru.svg" alt="">
+            <img class="header-lang__en" src="img/header/lang-en.svg" alt="">
+            <span>Ru</span>
+          </a>
+        </div>
+
+        <div class="header-login">
+          <a href="#"><img src="img/header/arrow.svg" alt=""><span>Вход</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="undefined">
+    <div class="container">
+      <div class="undefined-wrap">
+        <h2 class="undefined-subtitle">Упс</h2>
+        <b class="undefined-text">кажется что-то сломалось</b>
+        <h1 class="undefined-title">404</h1>
+        <b class="undefined-text">проверьте ссылку, или обратитесь в администрацию</b>
+      </div>
+    </div>
+  </section>
+
+  <div class="overlay-login overlay">
+    <div class="container">
+
+      <div class="popup-login popup animated">
+        <form action="#" class="popup-form login-form">
+          <h2 class="registry-form__title form-title">Добро пожаловать</h2>
+          <!-- /.popup-title -->
+
+          <div class="input-wrap">
+            <input type="text" class="input registry-form__input_login login-required" placeholder="логин">
+            <div class="invalid-text">
+              <span>обязательное поле</span>
+            </div>
+          </div>
+          <div class="input-wrap">
+            <input type="password" class="input registry-form__input_password login-required" placeholder="пароль">
+            <div class="invalid-text">
+              <span>обязательное поле</span>
+            </div>
+          </div>
+
+          <div class="captcha-wrap">
+            <div class="captcha">
+              <div class="g-recaptcha" data-sitekey="6Lf-J8QUAAAAABJAjV2zoNXvgKhq-d0NU1RJ6vXa"></div>
+            </div>
+            <button type="submit" class="btn login-form__btn">Вход</button>
+          </div>
+
+          <div class="invalid-form">
+            <span>неверный логин или пароль</span>
+          </div>
+        </form>
+        <div class="close close-login"></div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_site_key"></script>
+  <script src="js/undefined.js"></script>
+</body>
+
+</html>
